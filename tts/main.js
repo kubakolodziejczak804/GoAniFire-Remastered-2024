@@ -181,11 +181,10 @@ module.exports = (voiceName, text) => {
 				case "readloud": {
 					const req = https.request(
 						{
-							hostname: "101.99.94.14",														
+							hostname: "gonutts.net",														
 							path: voice.arg,
 							method: "POST",
-							headers: { 			
-								Host: "gonutts.net",					
+							headers: { 							
 								"Content-Type": "application/x-www-form-urlencoded"
 							}
 						},
@@ -200,10 +199,9 @@ module.exports = (voiceName, text) => {
 
 								if (path.length > 0) {
 									https.get({
-										hostname: "101.99.94.14",	
+										hostname: "gonutts.net",	
 										path: `/${path}`,
 										headers: {
-											Host: "gonutts.net"
 										}
 									}, (r) => {
                                                                                 let buffers = [];
